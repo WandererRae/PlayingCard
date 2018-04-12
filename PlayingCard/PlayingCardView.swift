@@ -13,11 +13,22 @@ import UIKit
 class PlayingCardView: UIView {
     
     @IBInspectable
-    var rank: Int = 5 {didSet {setNeedsDisplay(); setNeedsLayout()}}
+    var rank: Int = 11 {didSet {setNeedsDisplay(); setNeedsLayout()}}
     @IBInspectable
     var suit: String = "♥️" {didSet {setNeedsDisplay(); setNeedsLayout()}}
     @IBInspectable
-    var isFaceUp: Bool = false {didSet {setNeedsDisplay(); setNeedsLayout()}}
+    var isFaceUp: Bool = true {didSet {setNeedsDisplay(); setNeedsLayout()}}
+    @IBInspectable
+    var faceCardScale: CGFloat = sizeRatio.faceCardImageSizeToBoundsSize {didSet {setNeedsDisplay()}}
+    
+    @objc func adjustFaceCardScale(byHandlingGestureRecognizedBy recognizer: UIPinchGestureRecognizer) {
+        switch recognizer.state {
+        case .changed, .ended:
+            faceCardScale *= recognizer.scale
+            recognizer.scale = 1.0
+        default: break
+        }
+    }
     
     private func centeredAttributedString (_ string: String, fontSize: CGFloat) -> NSAttributedString {
         var font = UIFont.preferredFont(forTextStyle: .body).withSize(fontSize)
@@ -114,7 +125,7 @@ class PlayingCardView: UIView {
         
         if isFaceUp {
             if let faceCardImage = UIImage(named: rankString, in: Bundle(for: self.classForCoder), compatibleWith: traitCollection) {
-                faceCardImage.draw(in: bounds.zoom(by: sizeRatio.faceCardImageSizeToBoundsSize))
+                faceCardImage.draw(in: bounds.zoom(by: faceCardScale))
             } else {
                 drawPips()
             }
@@ -131,7 +142,7 @@ extension PlayingCardView {
         static let cornerFontSizeToBoundsHeight: CGFloat = 0.085
         static let cornerRadiusToBoundsHeight: CGFloat = 0.06
         static let cornerOffsetToCornerRadius: CGFloat = 0.33
-        static let faceCardImageSizeToBoundsSize: CGFloat = 0.75
+        static let faceCardImageSizeToBoundsSize: CGFloat = 0.60
     }
     private var cornerRadius: CGFloat {
         return bounds.size.height * sizeRatio.cornerRadiusToBoundsHeight
