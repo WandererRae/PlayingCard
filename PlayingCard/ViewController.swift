@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreMotion
+
 @IBDesignable
 class ViewController: UIViewController {
     
@@ -19,6 +21,39 @@ class ViewController: UIViewController {
     let cardFlipAnimationTime: Double = 0.6
     let cardScaleAnimationTime: Double = 1.0
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        accelerationDueToGravity()
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        cardBehavior.gravityBehavior.magnitude = 0
+        CMMotionManager.shared.stopAccelerometerUpdates()
+    }
+    
+    private func accelerationDueToGravity() {
+        if CMMotionManager.shared.isAccelerometerAvailable {
+            cardBehavior.gravityBehavior.magnitude = 1.0
+            CMMotionManager.shared.accelerometerUpdateInterval = 1/10
+            CMMotionManager.shared.startAccelerometerUpdates(to: .main) { (data, error) in
+                if var x = data?.acceleration.x, var y = data?.acceleration.y {
+                    
+                    switch UIDevice.current.orientation {
+                    case .portrait: y *= -1
+                    case .portraitUpsideDown: break
+                    case .landscapeRight: swap(&x, &y)
+                    case .landscapeLeft: swap (&x, &y); y *= -1
+                    default: x = 0; y = 0;
+                    }
+                    
+                    self.cardBehavior.gravityBehavior.gravityDirection = CGVector(dx: x, dy: y)
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,35 +164,6 @@ class ViewController: UIViewController {
         default: break
         }
     }
-    
-    
-    //    @IBOutlet weak var playingCardView: PlayingCardView! {
-    //        didSet {
-    //            let swipe = UISwipeGestureRecognizer(target: self, action: #selector(nextCard))
-    //            swipe.direction = [.left, .right]
-    //            playingCardView.addGestureRecognizer(swipe)
-    //            let pinch = UIPinchGestureRecognizer(target: playingCardView, action: #selector(PlayingCardView.adjustFaceCardScale(byHandlingGestureRecognizedBy:)))
-    //            playingCardView.addGestureRecognizer(pinch)
-    //        }
-    //    }
-    //
-    //    @IBAction func flipCard(_ sender: UITapGestureRecognizer) {
-    //        switch sender.state {
-    //        case .ended:
-    //            playingCardView.isFaceUp = !playingCardView.isFaceUp
-    //        default: break
-    //        }
-    //    }
-    //
-    //    @objc func nextCard () {
-    //        if let card = deck.draw() {
-    //            playingCardView.rank = card.rank.order
-    //            playingCardView.suit = card.suit.rawValue
-    //        }
-    //    }
-    //
-    //
-    //
 }
 
 extension CGFloat {

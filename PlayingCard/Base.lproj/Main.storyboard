@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,14 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21D-KZ-nGz" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21D-KZ-nGz" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="16" y="44" width="75" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="Mqe-0k-SWU"/>
-                                    <constraint firstAttribute="width" secondItem="21D-KZ-nGz" secondAttribute="height" multiplier="5:8" id="tTm-nx-g0k"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rank">
@@ -35,14 +31,11 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="suit" value="♠️"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-ms-MVg" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0k-ms-MVg" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="150" y="105" width="75" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="e0k-ms-MVg" secondAttribute="height" multiplier="5:8" id="Ayp-M2-mzL"/>
-                                    <constraint firstAttribute="width" constant="75" id="rIp-PP-O1F"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rank">
@@ -51,14 +44,11 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="suit" value="♠️"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zRF-bM-a13" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zRF-bM-a13" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="39" y="203" width="75" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="zRF-bM-a13" secondAttribute="height" multiplier="5:8" id="8Ah-8I-4mz"/>
-                                    <constraint firstAttribute="width" constant="75" id="GFj-Lp-3zO"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rank">
@@ -67,14 +57,11 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="suit" value="♠️"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuq-7D-68S" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fuq-7D-68S" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="258" y="203" width="75" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="fuq-7D-68S" secondAttribute="height" multiplier="5:8" id="kce-Bo-9Mi"/>
-                                    <constraint firstAttribute="width" constant="75" id="ze0-4w-AJB"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rank">
@@ -83,14 +70,11 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="suit" value="♠️"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZD-Md-6q3" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HZD-Md-6q3" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="150" y="316" width="75" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="HZD-Md-6q3" secondAttribute="height" multiplier="5:8" id="5Xm-1V-frs"/>
-                                    <constraint firstAttribute="width" constant="75" id="kVa-In-45w"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rank">
@@ -99,14 +83,11 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="suit" value="♠️"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nen-am-McW" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nen-am-McW" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="233" y="346" width="75" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="nen-am-McW" secondAttribute="height" multiplier="5:8" id="LXa-kp-veu"/>
-                                    <constraint firstAttribute="width" constant="75" id="Ssv-oI-6TF"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rank">
@@ -115,14 +96,11 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="suit" value="♠️"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHo-HO-DXd" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oHo-HO-DXd" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="39" y="635" width="75" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="oHo-HO-DXd" secondAttribute="height" multiplier="5:8" id="9GY-hq-7MJ"/>
-                                    <constraint firstAttribute="width" constant="75" id="yJb-PK-Th5"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rank">
@@ -131,14 +109,11 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="suit" value="♠️"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w6Y-lJ-81Y" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w6Y-lJ-81Y" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="67" y="373" width="75" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="4nL-Xe-18M"/>
-                                    <constraint firstAttribute="width" secondItem="w6Y-lJ-81Y" secondAttribute="height" multiplier="5:8" id="iEG-iR-YIP"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rank">
@@ -147,14 +122,11 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="suit" value="♠️"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVP-Rc-Rvb" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVP-Rc-Rvb" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="233" y="635" width="75" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="OKo-wX-GYH"/>
-                                    <constraint firstAttribute="width" secondItem="gVP-Rc-Rvb" secondAttribute="height" multiplier="5:8" id="nTd-Ye-d2Y"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rank">
@@ -163,14 +135,11 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="suit" value="♠️"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Trn-b8-Fhy" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
+                            <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Trn-b8-Fhy" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
                                 <rect key="frame" x="136" y="536" width="75" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Trn-b8-Fhy" secondAttribute="height" multiplier="5:8" id="ejm-b1-KRZ"/>
-                                    <constraint firstAttribute="width" constant="75" id="lqc-Rd-vjG"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isFaceUp" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="rank">
@@ -181,28 +150,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="HZD-Md-6q3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="150" id="4Y9-uc-dWW"/>
-                            <constraint firstItem="nen-am-McW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" constant="302" id="5Yi-UH-4dD"/>
-                            <constraint firstItem="zRF-bM-a13" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="39" id="7bJ-dj-ps7"/>
-                            <constraint firstItem="oHo-HO-DXd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="39" id="85g-gy-35a"/>
-                            <constraint firstItem="Trn-b8-Fhy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="136" id="94t-vE-l6L"/>
-                            <constraint firstItem="e0k-ms-MVg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="150" id="CWU-Ua-0WT"/>
-                            <constraint firstItem="gVP-Rc-Rvb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="233" id="DHT-kP-n2o"/>
-                            <constraint firstItem="w6Y-lJ-81Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="67" id="DNa-FL-5h9"/>
-                            <constraint firstItem="oHo-HO-DXd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" constant="591" id="GGw-3I-jdM"/>
-                            <constraint firstItem="w6Y-lJ-81Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" constant="329" id="Hoh-wZ-vvd"/>
-                            <constraint firstItem="HZD-Md-6q3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" constant="272" id="MZA-Bn-lEa"/>
-                            <constraint firstItem="21D-KZ-nGz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" id="O8l-wH-NLG"/>
-                            <constraint firstItem="fuq-7D-68S" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" constant="159" id="PrC-uR-Dpz"/>
-                            <constraint firstItem="21D-KZ-nGz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="16" id="Yec-Mz-dlm"/>
-                            <constraint firstItem="gVP-Rc-Rvb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" constant="591" id="bSA-uc-MQN"/>
-                            <constraint firstItem="fuq-7D-68S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="258" id="dcS-LX-zNA"/>
-                            <constraint firstItem="Trn-b8-Fhy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" constant="492" id="eUc-eL-5L0"/>
-                            <constraint firstItem="nen-am-McW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="250" constant="233" id="gPj-aY-OGB"/>
-                            <constraint firstItem="zRF-bM-a13" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" constant="159" id="oR1-67-3SP"/>
-                            <constraint firstItem="e0k-ms-MVg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="250" constant="61" id="vDw-YG-0VH"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>

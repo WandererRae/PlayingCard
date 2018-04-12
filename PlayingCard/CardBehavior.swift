@@ -9,6 +9,7 @@
 import UIKit
 
 class CardBehavior: UIDynamicBehavior {
+    
     lazy var collisionBehavior: UICollisionBehavior = {
         let behavior = UICollisionBehavior()
         behavior.translatesReferenceBoundsIntoBoundary = true
@@ -51,12 +52,14 @@ class CardBehavior: UIDynamicBehavior {
     func addItem(_ item:UIDynamicItem) {
         collisionBehavior.addItem(item)
         itemBehavior.addItem(item)
+        gravityBehavior.addItem(item)
         push(item)
     }
     
     func removeItem(_ item:UIDynamicItem) {
         collisionBehavior.removeItem(item)
         itemBehavior.removeItem(item)
+        gravityBehavior.removeItem(item)
     }
     
     override init() {
@@ -69,4 +72,11 @@ class CardBehavior: UIDynamicBehavior {
         self.init()
         animator.addBehavior(self)
     }
+    
+    
+    var gravityBehavior: UIGravityBehavior = {
+       let behavior = UIGravityBehavior()
+        behavior.magnitude = 0
+        return behavior
+    }()
 }

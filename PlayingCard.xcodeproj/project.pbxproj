@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11F3C300207FDD2800D269F5 /* CMMotionManager+shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F3C2FF207FDD2800D269F5 /* CMMotionManager+shared.swift */; };
 		FB5837C6205C627100B84D29 /* CardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5837C5205C627100B84D29 /* CardBehavior.swift */; };
 		FBBC58D32056D24E000BE298 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC58D22056D24E000BE298 /* AppDelegate.swift */; };
 		FBBC58D52056D24E000BE298 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBC58D42056D24E000BE298 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11F3C2FF207FDD2800D269F5 /* CMMotionManager+shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMMotionManager+shared.swift"; sourceTree = "<group>"; };
 		FB5837C5205C627100B84D29 /* CardBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBehavior.swift; sourceTree = "<group>"; };
 		FBBC58CF2056D24E000BE298 /* PlayingCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBBC58D22056D24E000BE298 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				FBBC58D22056D24E000BE298 /* AppDelegate.swift */,
 				FBBC58D42056D24E000BE298 /* ViewController.swift */,
+				11F3C2FF207FDD2800D269F5 /* CMMotionManager+shared.swift */,
 				FB5837C5205C627100B84D29 /* CardBehavior.swift */,
 				FBBC58E42056D28E000BE298 /* PlayingCard.swift */,
 				FBBC58E82056DD01000BE298 /* PlayingCardView.swift */,
@@ -151,6 +154,7 @@
 				FBBC58D52056D24E000BE298 /* ViewController.swift in Sources */,
 				FBBC58E72056D78D000BE298 /* PlayingCardDeck.swift in Sources */,
 				FBBC58E52056D28E000BE298 /* PlayingCard.swift in Sources */,
+				11F3C300207FDD2800D269F5 /* CMMotionManager+shared.swift in Sources */,
 				FBBC58E92056DD01000BE298 /* PlayingCardView.swift in Sources */,
 				FBBC58D32056D24E000BE298 /* AppDelegate.swift in Sources */,
 				FB5837C6205C627100B84D29 /* CardBehavior.swift in Sources */,
